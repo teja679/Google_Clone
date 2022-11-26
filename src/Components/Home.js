@@ -1,30 +1,60 @@
-import { IconButton, Tooltip } from '@mui/material'
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { StyleHeaderContainer, StyleHeaderLeft, StyleHeaderRight, StyleHeaderWrapper } from './Home.styled'
-
+import { Avatar, IconButton, Tooltip } from "@mui/material";
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  StyledHeaderContainer,
+  StyledHeaderLeft,
+  StyledHeaderRight,
+  StyledHeaderWrapper,
+  StyledLogoContainer,
+} from "./Home.styled";
+import AppsIcon from "@mui/icons-material/Apps";
+import SearchInput from "./SearchInput";
 function Home() {
   return (
-    <div>Home
-        <StyleHeaderContainer>
-        <StyleHeaderWrapper>
-          <StyleHeaderLeft>
-          <Link to="/about">About</Link>
+    <div>
+      Home
+      <StyledHeaderContainer>
+        <StyledHeaderWrapper>
+          <StyledHeaderLeft>
+            <Link to="/about">About</Link>
             <Link to="/store">Store</Link>
-          </StyleHeaderLeft>
-          <StyleHeaderRight>
+          </StyledHeaderLeft>
+          <StyledHeaderRight>
             <Link to="/gmail">Gmail</Link>
             <Link to="/images">Images</Link>
-            <Tooltip>
-                <IconButton>
-                    
-                </IconButton>
+            <Tooltip title="Google Apps">
+              <IconButton>
+                <AppsIcon sx={{ fontSize: "1.5rem", color: "#fff" }} />
+              </IconButton>
             </Tooltip>
-          </StyleHeaderRight>
-        </StyleHeaderWrapper>
-        </StyleHeaderContainer>
+            <Tooltip>
+              <Avatar
+                sx={{
+                  width: "30px",
+                  height: "30px",
+                  borderRadius: "50%",
+                  backgroundColor: "#8ab4f8",
+                  color: "#fff",
+                  cursor: "pointer",
+                  marginRight: "8px",
+                }}
+              >
+                JP
+              </Avatar>
+            </Tooltip>
+          </StyledHeaderRight>
+        </StyledHeaderWrapper>
+        <StyledLogoContainer>
+          <img
+            src="https://www.edigitalagency.com.au/wp-content/uploads/google-logo-png-transparent-background-large-new.png"
+            alt="google"
+          />
+          <SearchInput />
+        </StyledLogoContainer>
+      </StyledHeaderContainer>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
