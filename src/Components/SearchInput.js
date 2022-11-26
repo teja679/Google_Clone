@@ -8,7 +8,7 @@ import {
   StyledSearchIcon,
 } from "./SearchInput.styled";
 
-function SearchInput() {
+function SearchInput({ showButtons = false}) {
   const [searchTerm, setSearchTerm] = useState("");
     const navigate = useNavigate()
 
@@ -28,7 +28,7 @@ function SearchInput() {
           <StyledMicIcon />
         </Tooltip>
       </StyledInputWrapper>
-      <StyledButtonContainer>
+      <StyledButtonContainer showButtons={showButtons}>
         <Button variant="outlined" type="submit">
           Google Search
         </Button>

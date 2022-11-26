@@ -49,7 +49,7 @@ function Home() {
             src="https://www.edigitalagency.com.au/wp-content/uploads/google-logo-png-transparent-background-large-new.png"
             alt="google"
           />
-          <SearchInput />
+          <SearchInput showButtons='true' />
         </StyledLogoContainer>
       </StyledHeaderContainer>
     </div>

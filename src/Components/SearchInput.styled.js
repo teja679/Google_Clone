@@ -4,7 +4,7 @@ import MicIcon from "@mui/icons-material/Mic";
 import { Button } from "@mui/material";
 
 const StyledInputWrapper = styled("div")`
-  display: flex;
+  display: ${(props) => props.showButtons ? 'flex' : 'none'};
   justify-content: center;
   align-items: center;
   width: 75%;
