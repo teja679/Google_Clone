@@ -1,23 +1,41 @@
-import { Tooltip } from '@mui/material'
-import React from 'react'
-import { StyledInputWrapper, StyledMicIcon, StyledSearchIcon } from './SearchInput.styled'
+import { Button, Tooltip } from "@mui/material";
+import React, { useState } from "react";
+import { useNavigate } from "react-router";
+import {
+  StyledButtonContainer,
+  StyledInputWrapper,
+  StyledMicIcon,
+  StyledSearchIcon,
+} from "./SearchInput.styled";
 
 function SearchInput() {
-  return (
-    <form>
-        <StyledInputWrapper>
-            <StyledSearchIcon>
-                <input />
-                <Tooltip title='Search by voice'>
-                    {/* <SearchMicIcon/> */}
-                </Tooltip>
-            </StyledSearchIcon>
-            <StyledMicIcon>
+  const [searchTerm, setSearchTerm] = useState("");
+    const navigate = useNavigate()
 
-            </StyledMicIcon>
-        </StyledInputWrapper>
+    const handleSearch = (e) => {
+        e.preventDefault()
+        navigate(`/search?${searchTerm}`)
+    }
+  return (
+    <form onSubmit={handleSearch}>
+      <StyledInputWrapper>
+        <StyledSearchIcon />
+        <input
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <Tooltip title="Search by voice">
+          <StyledMicIcon />
+        </Tooltip>
+      </StyledInputWrapper>
+      <StyledButtonContainer>
+        <Button variant="outlined" type="submit">
+          Google Search
+        </Button>
+        <Button variant="outlined">I'm feeling lucky</Button>
+      </StyledButtonContainer>
     </form>
-  )
+  );
 }
 
-export default SearchInput
+export default SearchInput;

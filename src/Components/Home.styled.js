@@ -49,7 +49,7 @@ a {
 const StyledLogoContainer = styled("div")`
 display: flex;
 flex-direction: column;
-margin-top: 10px;
+margin-top: 180px;
 flex: 1;
 img {
     height: 92px;
