@@ -13,7 +13,6 @@ import SearchInput from "./SearchInput";
 function Home() {
   return (
     <div>
-      Home
       <StyledHeaderContainer>
         <StyledHeaderWrapper>
           <StyledHeaderLeft>

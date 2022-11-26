@@ -19,6 +19,7 @@ a {
     display: inline-block;
     padding: 5px;
     margin: 0px 5px;
+    color: white;
     text-decoration: none;
     font-size: 0.875rem;
     font-family: Roboto, arial, sans-serif;
@@ -45,7 +46,16 @@ a {
     }
 }
 `;
-const StyledLogoContainer = styled("div")``;
+const StyledLogoContainer = styled("div")`
+display: flex;
+flex-direction: column;
+margin-top: 10px;
+flex: 1;
+img {
+    height: 92px;
+    object-fit: contain;
+}
+`;
 
 export {
   StyledHeaderContainer,
