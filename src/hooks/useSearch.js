@@ -20,6 +20,8 @@ const SEARCH_ENGINE_KEY = '45816dda8133643b7';
     };
     fetchData();
   }, [searchTerm]);
+  
+  console.log(data)
   return {
     data,
   }

@@ -25,8 +25,8 @@ const SearchResultsTitle = styled("a")`
   text-decoration: none;
   img {
     object-fit: contain;
-    height: 24px;
-    width: 24px;
+    height: 36px;
+    width: 36px;
     margin-right: 10px;
   }
   &:hover {
