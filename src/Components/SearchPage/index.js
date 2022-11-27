@@ -28,8 +28,8 @@ function SearchPage() {
   const { search } = useLocation()
   const searchTerm = search?.split('?')[1];
   console.log(searchTerm)
-  const data = mocks;
-  console.log(data)
+  // const data = mocks;
+  const { data } = useSearch(searchTerm)
   // console.log(data)
   return (
     <div>

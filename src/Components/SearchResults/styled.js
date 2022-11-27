@@ -21,7 +21,19 @@ const SearchResultWrapper = styled("div")`
   align-items: center;
   margin: 48px 0;
 `;
-const SearchResultsTitle = styled("a")``;
+const SearchResultsTitle = styled("a")`
+  text-decoration: none;
+  img {
+    object-fit: contain;
+    height: 24px;
+    width: 24px;
+    margin-right: 10px;
+  }
+  &:hover {
+    text-decoration: underline;
+    color: #bdc1c6;
+  }
+`;
 
 export { SearchResultsTitle, StyledResultsContainer, SearchResultWrapper };
 

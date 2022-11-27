@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-
 import axios from "axios";
 
-const BASE_URL = "https://customsearch.googleapis.com/customsearch";
+const BASE_URL = "https://customsearch.googleapis.com/customsearch/v1";
 
-const API_KEY = process.env.REACT_APP_SEARCH_KEY;
-const SEARCH_ENGINE_KEY = process.env.REACT_APP_SEARCH_ENGINE_KEY;
+
+const API_KEY = 'AIzaSyD_u_w2ie_K-NvIBp5hvPPBP_roY7qgzbg';
+const SEARCH_ENGINE_KEY = '45816dda8133643b7';
+
 
  const useSearch = (searchTerm) => {
   const [data, setData] = useState(null);
@@ -16,7 +17,7 @@ const SEARCH_ENGINE_KEY = process.env.REACT_APP_SEARCH_ENGINE_KEY;
         `${BASE_URL}?key=${API_KEY}&cx=${SEARCH_ENGINE_KEY}&q=${searchTerm}`
       );
       setData(response?.data)
-      console.log(response?.data)
+      console.log('respose',response?.data)
     };
     fetchData();
   }, [searchTerm]);
@@ -26,3 +27,7 @@ const SEARCH_ENGINE_KEY = process.env.REACT_APP_SEARCH_ENGINE_KEY;
 };
 
 export default useSearch;
+
+
+
+// .env file format for private
