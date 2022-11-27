@@ -21,6 +21,7 @@ import {
   StyledSubOptionsLeft,
 } from "./SearchPage.styled";
 import { Avatar, IconButton, Tooltip } from "@mui/material";
+import SearchResults from "./SearchResults";
 
 function SearchPage() {
   return (
@@ -102,7 +103,11 @@ function SearchPage() {
             </StyledOptions>
           </StyledHeaderRight>
         </StyledSearchHeader>
-        <div>search result</div>
+        {
+          true && (
+            <SearchResults />
+          )
+        }
       </StyledSearchPageHeaderContainer>
     </div>
   );
