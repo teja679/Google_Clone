@@ -7,9 +7,9 @@ import {
   StyledHeaderRight,
   StyledHeaderWrapper,
   StyledLogoContainer,
-} from "./Home.styled";
+} from "./styled";
 import AppsIcon from "@mui/icons-material/Apps";
-import SearchInput from "./SearchInput";
+import SearchInput from "../SearchInput";
 function Home() {
   return (
     <div>

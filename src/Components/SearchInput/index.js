@@ -6,7 +6,7 @@ import {
   StyledInputWrapper,
   StyledMicIcon,
   StyledSearchIcon,
-} from "./SearchInput.styled";
+} from "./styled";
 
 function SearchInput({ showButtons = false }) {
   const [searchTerm, setSearchTerm] = useState("");

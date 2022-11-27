@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import SearchInput from "./SearchInput";
+import { Link, useLocation } from "react-router-dom";
+import SearchInput from "../SearchInput";
 import SearchIcon from "@mui/icons-material/Search";
 import FeedIcon from "@mui/icons-material/Feed";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
@@ -19,11 +19,18 @@ import {
   StyledSearchHeader,
   StyledSearchPageHeaderContainer,
   StyledSubOptionsLeft,
-} from "./SearchPage.styled";
+} from "./styled";
 import { Avatar, IconButton, Tooltip } from "@mui/material";
-import SearchResults from "./SearchResults";
-
+import SearchResults from "../SearchResults";
+import useSearch from '../../hooks/useSearch'
+import mocks from "../../mocks";
 function SearchPage() {
+  const { search } = useLocation()
+  const searchTerm = search?.split('?')[1];
+  console.log(searchTerm)
+  const data = mocks;
+  console.log(data)
+  // console.log(data)
   return (
     <div>
       <StyledSearchPageHeaderContainer>
@@ -104,9 +111,9 @@ function SearchPage() {
           </StyledHeaderRight>
         </StyledSearchHeader>
         {
-          true && (
-            <SearchResults />
-          )
+          data ? (
+            <SearchResults data={data} />
+          ) : ( <div>No data available</div>)
         }
       </StyledSearchPageHeaderContainer>
     </div>

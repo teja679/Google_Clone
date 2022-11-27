@@ -1,6 +1,6 @@
 import React from 'react'
 
-function SearchResults() {
+function SearchResults({ data }) {
   return (
     <div>SearchResults</div>
   )
