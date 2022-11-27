@@ -17,7 +17,6 @@ const SEARCH_ENGINE_KEY = '45816dda8133643b7';
         `${BASE_URL}?key=${API_KEY}&cx=${SEARCH_ENGINE_KEY}&q=${searchTerm}`
       );
       setData(response?.data)
-      console.log('respose',response?.data)
     };
     fetchData();
   }, [searchTerm]);

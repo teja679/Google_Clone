@@ -46,7 +46,7 @@ function Home() {
         </StyledHeaderWrapper>
         <StyledLogoContainer>
           <img
-            src="https://www.edigitalagency.com.au/wp-content/uploads/google-logo-png-transparent-background-large-new.png"
+            src='https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png'
             alt="google"
           />
           <SearchInput showButtons={true} />

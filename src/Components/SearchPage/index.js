@@ -22,15 +22,11 @@ import {
 } from "./styled";
 import { Avatar, IconButton, Tooltip } from "@mui/material";
 import SearchResults from "../SearchResults";
-import useSearch from '../../hooks/useSearch'
-import mocks from "../../mocks";
+import useSearch from "../../hooks/useSearch";
 function SearchPage() {
-  const { search } = useLocation()
-  const searchTerm = search?.split('?')[1];
-  console.log(searchTerm)
-  // const data = mocks;
-  const { data } = useSearch(searchTerm)
-  // console.log(data)
+  const { search } = useLocation();
+  const searchTerm = search?.split("?")[1];
+  const { data } = useSearch(searchTerm);
   return (
     <div>
       <StyledSearchPageHeaderContainer>
@@ -38,7 +34,7 @@ function SearchPage() {
           <StyledHeaderLeft>
             <Link to="/">
               <StyledLogo
-                src="https://www.edigitalagency.com.au/wp-content/uploads/google-logo-png-transparent-background-large-new.png"
+                src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png"
                 alt="googleLogo"
               />
             </Link>
@@ -92,7 +88,7 @@ function SearchPage() {
               </Tooltip>
             </StyledOptions>
             <StyledOptions>
-              <Tooltip title='Google Apps'>
+              <Tooltip title="Google Apps">
                 <Avatar
                   sx={{
                     width: "30px",
@@ -110,11 +106,7 @@ function SearchPage() {
             </StyledOptions>
           </StyledHeaderRight>
         </StyledSearchHeader>
-        {
-          data ? (
-            <SearchResults data={data} />
-          ) : ( <div>No data available</div>)
-        }
+        {data ? <SearchResults data={data} /> : <div>No data available</div>}
       </StyledSearchPageHeaderContainer>
     </div>
   );
