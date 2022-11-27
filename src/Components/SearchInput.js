@@ -1,4 +1,4 @@
-import { Button, Tooltip } from "@mui/material";
+import { Button, Input, TextField, Tooltip } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import {
@@ -8,17 +8,17 @@ import {
   StyledSearchIcon,
 } from "./SearchInput.styled";
 
-function SearchInput({ showButtons = false}) {
+function SearchInput({ showButtons = false }) {
   const [searchTerm, setSearchTerm] = useState("");
-    const navigate = useNavigate()
+  const navigate = useNavigate();
 
-    const handleSearch = (e) => {
-        e.preventDefault()
-        navigate(`/search?${searchTerm}`)
-    }
+  const handleSearch = (e) => {
+    e.preventDefault();
+    navigate(`/search?${searchTerm}`);
+  };
   return (
     <form onSubmit={handleSearch}>
-      <StyledInputWrapper>
+      <StyledInputWrapper showButtons={true}>
         <StyledSearchIcon />
         <input
           value={searchTerm}
@@ -28,12 +28,14 @@ function SearchInput({ showButtons = false}) {
           <StyledMicIcon />
         </Tooltip>
       </StyledInputWrapper>
-      <StyledButtonContainer showButtons={showButtons}>
-        <Button variant="outlined" type="submit">
-          Google Search
-        </Button>
-        <Button variant="outlined">I'm feeling lucky</Button>
-      </StyledButtonContainer>
+      {showButtons && (
+        <StyledButtonContainer showButtons={showButtons}>
+          <Button variant="outlined" type="submit">
+            Google Search
+          </Button>
+          <Button variant="outlined">I'm feeling lucky</Button>
+        </StyledButtonContainer>
+       )}
     </form>
   );
 }

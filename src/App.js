@@ -2,6 +2,8 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './Components/Home';
+import SearchInput from './Components/SearchInput';
+import SearchPage from './Components/SearchPage';
 // import SearchPage from './Components/SearchPage';
 // import War from './War';
 
@@ -11,8 +13,7 @@ function App() {
     <Routes>
       hai
       <Route path='/' element={<Home />} />
-      {/* <Route path='/' element={<War />} />
-      <Route path='/search' element={<SearchPage/>} /> */}
+      <Route path='/search' element={<SearchPage />} /> 
     </Routes>
    </Router>
   );
