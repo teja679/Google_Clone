@@ -9,7 +9,7 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import FmdGoodIcon from "@mui/icons-material/FmdGood";
 import SettingsIcon from "@mui/icons-material/Settings";
 import AppsIcon from "@mui/icons-material/Apps";
-
+import logo from '../../assets/google_logo.png'
 import {
   StyledHeaderLeft,
   StyledHeaderMiddle,
@@ -34,7 +34,8 @@ function SearchPage() {
           <StyledHeaderLeft>
             <Link to="/">
               <StyledLogo
-                src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png"
+              src={logo}
+                // src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png"
                 alt="googleLogo"
               />
             </Link>
@@ -89,19 +90,20 @@ function SearchPage() {
             </StyledOptions>
             <StyledOptions>
               <Tooltip title="Google Apps">
-                <Avatar
-                  sx={{
-                    width: "30px",
-                    height: "15px",
-                    borderRadius: "50%",
-                    backgroundColor: "#8ab4f8",
-                    color: "#fff",
-                    cursor: "pointer",
-                    marginRight: "8px",
-                  }}
-                >
-                  SYT
-                </Avatar>
+              <Avatar
+                sx={{
+                  width: "30px",
+                  height: "30px",
+                  fontSize: '0.75rem',
+                  borderRadius: "50%",
+                  backgroundColor: "#8ab4f8",
+                  color: "#fff",
+                  cursor: "pointer",
+                  marginRight: "8px",
+                }}
+              >
+                SYT
+              </Avatar>
               </Tooltip>
             </StyledOptions>
           </StyledHeaderRight>

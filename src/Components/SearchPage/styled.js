@@ -3,7 +3,6 @@ import { styled } from "@mui/system";
 const StyledSearchPageHeaderContainer = styled("div")`
   display: flex;
   flex-direction: column;
-  height: 100vh;
 `;
 const StyledSearchHeader = styled("div")`
   display: flex;

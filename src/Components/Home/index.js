@@ -1,6 +1,7 @@
 import { Avatar, IconButton, Tooltip } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from '../../assets/google_logo.png' 
 import {
   StyledHeaderContainer,
   StyledHeaderLeft,
@@ -31,7 +32,8 @@ function Home() {
               <Avatar
                 sx={{
                   width: "30px",
-                  height: "15px",
+                  height: "30px",
+                  fontSize: '0.75rem',
                   borderRadius: "50%",
                   backgroundColor: "#8ab4f8",
                   color: "#fff",
@@ -46,7 +48,8 @@ function Home() {
         </StyledHeaderWrapper>
         <StyledLogoContainer>
           <img
-            src='https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png'
+          src={logo}
+            // src='https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png'
             alt="google"
           />
           <SearchInput showButtons={true} />
