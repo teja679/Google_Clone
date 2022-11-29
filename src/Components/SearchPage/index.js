@@ -92,7 +92,7 @@ function SearchPage() {
                 <Avatar
                   sx={{
                     width: "30px",
-                    height: "30px",
+                    height: "15px",
                     borderRadius: "50%",
                     backgroundColor: "#8ab4f8",
                     color: "#fff",
