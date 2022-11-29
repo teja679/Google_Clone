@@ -39,7 +39,7 @@ function Home() {
                   marginRight: "8px",
                 }}
               >
-                JP
+                SYT
               </Avatar>
             </Tooltip>
           </StyledHeaderRight>

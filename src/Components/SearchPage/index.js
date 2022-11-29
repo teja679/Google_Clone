@@ -100,7 +100,7 @@ function SearchPage() {
                     marginRight: "8px",
                   }}
                 >
-                  JP
+                  SYT
                 </Avatar>
               </Tooltip>
             </StyledOptions>
